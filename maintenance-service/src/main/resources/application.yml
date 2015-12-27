@@ -1,0 +1,53 @@
+# Configuration without eureka features
+# Set environment to -Dspring.profiles.active=native
+
+spring:
+  profiles: native
+  
+server:
+  port: 8085
+  
+helloWorld: Hello World 
+
+logging:
+   level:
+      de.msg.xt.microservices: DEBUG
+
+---
+
+# Configuration eureka features
+# Set environment to -Dspring.profiles.active=native
+
+spring:
+  profiles: eureka
+
+server:
+  port: 8085
+  
+helloWorld: Hello World from Console
+
+logging:
+   level:
+      de.msg.xt.microservices: DEBUG
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+
+---
+
+spring:
+  profiles: cloud
+
+server:
+  port: 8082
+  
+helloWorld: Hello World from cloud
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
