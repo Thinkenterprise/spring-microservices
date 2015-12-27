@@ -1,0 +1,6 @@
+# Configuration of the service name
+spring:
+  application:
+    name: api-gateway-service
+
+# Configuration of the Configuration Server 

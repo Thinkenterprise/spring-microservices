@@ -1,0 +1,74 @@
+# Configuration without eureka features
+# Set environment to -Dspring.profiles.active=native
+
+spring:
+  profiles: native
+  
+server:
+  port: 8090
+  
+helloWorld: Hello World Native 
+
+logging:
+   level:
+      de.msg.xt.microservices: DEBUG
+      
+---
+
+# Configuration with eureka features
+# Set environment to -Dspring.profiles.active=eureka
+
+spring:
+  profiles: eureka
+
+  
+server:
+  port: 8090
+  
+  
+helloWorld: Hello World from Eureka
+
+
+logging:
+   level:
+      de.msg.xt.microservices: DEBUG
+      org.springframework.security: INFO
+      org.springframework.cloud.netflix: INFO
+      com.netflix.zuul: INFO
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 5   
+
+zuul:
+  routes:
+    cardata-service: 
+      path: /cardata/**
+    maintenance-service:
+      path: /maintenance/**
+
+---
+
+spring:
+  profiles: cloud
+
+server:
+  port: 8090
+  
+helloWorld: Hello World from Cloud
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+zuul:
+  routes:
+    cardata-service: 
+      path: /cardata/**
+    maintenance-service:
+      path: /maintenance/**
