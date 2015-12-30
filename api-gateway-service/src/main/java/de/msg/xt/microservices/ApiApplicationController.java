@@ -28,7 +28,7 @@ public class ApiApplicationController {
 	/**
 	 * A client commit an appointment  
 	 * 
-	 * curl -X POST -d '{}' http://localhost:8090 --header "Content-Type:application/json"
+	 * curl -X POST http://localhost:8090/commitAppointment/ --header "Content-Type:application/json" -d '{"name":"Tire"}'
 	 * 
 	 * 
 	 * @author Michael Schäfer 

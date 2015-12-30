@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * 
- * 
+ * curl -X POST http://localhost:8085/commitAppointment/ --header "Content-Type:application/json" -d '{"name":"Tire"}'
  * 
  * @author Michael Schäfer 
  * 
