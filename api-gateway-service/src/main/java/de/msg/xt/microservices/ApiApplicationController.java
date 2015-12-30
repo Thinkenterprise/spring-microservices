@@ -1,8 +1,12 @@
 package de.msg.xt.microservices;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -22,11 +26,14 @@ public class ApiApplicationController {
 	private MaintenanceIntegrationService maintenanceIntegrationService;
 	
 	/**
-	 * A client commit an apponment 
+	 * A client commit an appointment  
+	 * 
+	 * curl -X POST -d '{}' http://localhost:8090 --header "Content-Type:application/json"
+	 * 
 	 * 
 	 * @author Michael Schäfer 
 	 * */
-	@RequestMapping
+	@RequestMapping(value="commitAppointment", method=RequestMethod.POST)
 	public void commitAppointment(@RequestBody Appoinment appoinment) {
 	
 		// commit the appointment over the car data service 
@@ -36,6 +43,22 @@ public class ApiApplicationController {
 		maintenanceIntegrationService.commitAppointment(appoinment);
 	
 	} 
+	
+	/**
+	 * Get an Appointment Resource  
+	 * 
+	 * @author Michael Schäfer 
+	 * 
+	 * */
+	
+	
+	@RequestMapping
+	public ResponseEntity<Appoinment> getAll() {
+		
+		return new ResponseEntity<Appoinment>(new Appoinment("Tire"),HttpStatus.OK);
+		
+	}
+	
 	
 	
 	

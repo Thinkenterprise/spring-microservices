@@ -9,6 +9,7 @@ server:
   
 helloWorld: Hello World Native 
 
+
 logging:
    level:
       de.msg.xt.microservices: DEBUG

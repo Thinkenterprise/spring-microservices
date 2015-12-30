@@ -114,6 +114,16 @@ public class CarDataController {
 	}
 	
 	
+	/**
+	 * Commit an appointment 
+	 * 
+	 * @author Michael Schäfer 
+	 * 
+	 * */
+	@RequestMapping(value="commitAppointment", method=RequestMethod.POST)
+	public ResponseEntity<Boolean> commitAppointment(Appoinment appointment) {
+		return new ResponseEntity<Boolean>(new Boolean(true),HttpStatus.OK);
+	}
 	
 	
 }
