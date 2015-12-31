@@ -3,27 +3,27 @@
 
 What this project is about....
 
-## Quickstart
+#Quickstart
 
-#Prerequisites:
+##Prerequisites:
 - Java SE 8
 - git
 - maven
 - bash
 
-#Clone repository:
+##Clone repository:
 `````
 git clone https://github.com/Thinkenterprise/spring-microservices.git
 cd spring-microservices
 ```
 
-#Build Microservices:
+##Build Microservices:
 
 ```
 ./buildservices.sh 
 ```
 
-#Start Microservice Logging:
+##Start Microservice Logging:
 
 ```
 ./logservices.sh 
@@ -31,12 +31,12 @@ cd spring-microservices
 
 
 
-# Start Microservices:
+##Start Microservices:
 ```
 ./runservice.sh
 ```
 
-# Simple Tests:
+##Simple Tests:
 
 Service Registry Test:
 
@@ -58,7 +58,8 @@ curl http://localhost:8082/helloWorld/
 curl http://localhost:8083/helloWorld/
 ```
 
-Test Maintenance Microservice. 
+Test Maintenance Microservice:
+
 The Maintenance Microservice is a Microservice client and able to discover the eureka 
 service registry. Call the following command to the all carda service which are found 
 by the maintenance service. 
