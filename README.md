@@ -5,25 +5,25 @@ What this project is about....
 
 #Quickstart
 
-##Prerequisites:
+###Prerequisites
 - Java SE 8
 - git
 - maven
 - bash
 
-##Clone repository:
+###Clone repository
 `````
 git clone https://github.com/Thinkenterprise/spring-microservices.git
 cd spring-microservices
 ```
 
-##Build Microservices:
+###Build Microservices
 
 ```
 ./buildservices.sh 
 ```
 
-##Start Microservice Logging:
+###Start Microservice Logging
 
 ```
 ./logservices.sh 
