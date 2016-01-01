@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>io.thinkenterprise</groupId>
-	<artifactId>discovery-producer</artifactId>
+	<artifactId>maintenance-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>registry-service</name>
-	<description>Demo Project for Eureka Registry Service Client</description>
+	<name>maintenance-service</name>
+	<description>Demo Project for Eureka maintenance service</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

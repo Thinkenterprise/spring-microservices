@@ -52,7 +52,7 @@ public class ApiApplicationController {
 	 * */
 	
 	
-	@RequestMapping
+	@RequestMapping(value="getAll")
 	public ResponseEntity<Appoinment> getAll() {
 		
 		return new ResponseEntity<Appoinment>(new Appoinment("Tire"),HttpStatus.OK);

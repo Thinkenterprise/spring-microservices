@@ -36,6 +36,7 @@ logging:
       org.springframework.security: INFO
       org.springframework.cloud.netflix: INFO
       com.netflix.zuul: INFO
+      com.netflix.zuul.ZuulFilter: DEBUG
 
 eureka:
   client:
@@ -51,6 +52,10 @@ zuul:
     maintenance-service:
       path: /maintenance/**
 
+security:
+   user:
+      name: michael 
+      password: nix
 ---
 
 spring:
