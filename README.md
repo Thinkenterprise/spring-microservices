@@ -19,14 +19,14 @@ cd spring-microservices
 
 ###Build Microservices
 The microservice projects are strictly seperated. Thats the nature of microservices.
-The microservices share nothing. Therfore we have no parent POM an to build the 
-microservices atefacts seperatly. The build script support you.  
+The microservices share nothing. Therfore we haven't a parent POM and to build the 
+microservices artefacts separately. The build script support you.  
 ```
 ./buildservices.sh 
 ```
 
 ###Start Microservice Logging
-The logging script calls tail and tails the log files wich each microservice generate. 
+The logging script calls tail and print the log files which each microservice generates. 
 ```
 ./logservices.sh 
 ```
@@ -34,7 +34,7 @@ The logging script calls tail and tails the log files wich each microservice gen
 
 ##Start Microservices:
 The running script start all microserves in the right order with an delay between them
-on the right ports with the eureka profile. 
+on the right port with the eureka profile. 
 ```
 ./runservice.sh
 ```
@@ -52,8 +52,8 @@ http://localhost:8761/
 Test Cardata Microservices:
 
 The Cardata Microservices are registered by the eureka service registry. 
-A simple Http-Request to each Microservice with Hello World Eureka response.
-The results are shown in the console an console log over the logging srcipt. 
+A simple Http-Request on any microservice returned "Hello World Eureka" response.
+The results are shown in the console and console log via the logging srcipt. 
 
 ```
 curl http://localhost:8081/helloWorld/
@@ -63,9 +63,8 @@ curl http://localhost:8083/helloWorld/
 
 Test Maintenance Microservice:
 
-The Maintenance Microservice is a Microservice client and able to discover the eureka 
-service registry. Call the following command to the all carda service which are found 
-by the maintenance service. 
+The Maintenance Microservice is a microservice client and able to discover the eureka 
+service registry. To see all running cardata microservice instances call the following command. 
 
 ```
 curl http://localhost:8081/instance/
