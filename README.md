@@ -84,7 +84,7 @@ the Rest Template.
 
 Test The API Gateway Service: 
 
-At least you can test the API Gateway Microservice. 
+Finally you can test the API Gateway Microservice. 
 
 ```
 curl -X GET http://localhost:8090/cardata/helloWorld -u michael:nix
