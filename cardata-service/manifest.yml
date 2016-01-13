@@ -4,6 +4,11 @@ applications:
   host: cardata-service-${random-word}
   memory: 512M
   instances: 1
+  timeout: 90
   path: target/cardata-service-0.0.1-SNAPSHOT.jar
   env:
     SPRING_PROFILES_ACTIVE: cloud
+  services:
+    - cardata-service-database 
+    - configuration-service
+    - registry-service 
